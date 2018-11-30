@@ -1,7 +1,7 @@
 $alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 $contestID = Read-Host "Put contest id"
-$path = "${contestID}"
+$path = "src/${contestID}"
 $flag = Test-Path $path
 if(!$flag){
     mkdir $path
@@ -12,7 +12,7 @@ if(!(Test-Path $cpath)){
     Copy-Item "run.ps1" $cpath
 }
 
-$path = "${path}/${contestID}_"
+$path = "src/${contestID}/${contestID}_"
 $probCount = Read-Host "Put the number of problems"
 $probCount = [int]$probCount
 
