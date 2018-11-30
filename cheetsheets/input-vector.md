@@ -1,6 +1,7 @@
 int n;
 cin>> n;
-vector<int> (n);
+//aという配列にはnこの要素がある
+vector<int> a(n);
 
 rep(i,n){
     cin >> a[i];

@@ -12,5 +12,12 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
-}
+    int n, H, Cx, Cy
+    cin >> n;
+    vector<int> x(n), y(n),h(n);
+    REP(i,n){
+        cin>> x[i]>> y[i] >> h[i];
+        
+    }
+    
+    

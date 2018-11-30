@@ -25,4 +25,4 @@ for($i = 0; $i -lt $probCount; $i++){
     }
 }
 
-cd "${contestID}"
+cd "src/${contestID}"
