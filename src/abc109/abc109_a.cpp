@@ -12,5 +12,19 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int a, b; 
+    cin >> a >> b;
+    int ans = 0;
+    for (int c = 1; c<=3; c++){
+        if ((a * b * c) % 2 == 1){
+            ans = 1;
+        }        
+    }
+    if (ans == 1){
+        print("Yes");
+    }
+    else{
+        print("No");
+    }
+return 0;
 }

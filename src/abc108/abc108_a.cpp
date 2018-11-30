@@ -12,5 +12,12 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int k;
+    cin >> k;
+    if (k%2 == 0){
+        print(pow(k/2, 2));
+    } else {
+        print((k/2) * (k/2+1));
+    }
+return 0;
 }
