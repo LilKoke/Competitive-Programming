@@ -12,6 +12,10 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int n; cin>>n;
+    vector<int> a(n);
+    REP(i,n) cin>>a[i];
+    int sum
+    
 return 0;
 }

@@ -6,8 +6,8 @@ using namespace std;
 #define sp(x) cout<<setprecision(x);
 #define FOR(i,a,b) for(int i=(a);i<(b);i++)
 #define REP(i,n) FOR(i,0,n) 
-#define all(a) (a).begin(), (a).end()
-#define inf 10000000
+#define all(a) a.begin(), (a).end()
+#define inf = 9876543210
  
 int main(){
     ios::sync_with_stdio(false);
