@@ -12,22 +12,6 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n; cin>>n;
-    vector<int> a(n);
-    REP(i,n) cin>>a[i];
-    int sum; 
-    int ans = 0;
-    int i, j;
-    for(i=1;i<n;i++){
-        for(j=0;j<i;j++){
-            sum = a[i]+a[j];
-            if (sum%3==0){
-            ans++;
-            }
-        }
-    }
-    
-    
-    print(ans);
+
 return 0;
 }

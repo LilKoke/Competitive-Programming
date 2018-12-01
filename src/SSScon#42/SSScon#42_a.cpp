@@ -12,22 +12,10 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n; cin>>n;
-    vector<int> a(n);
-    REP(i,n) cin>>a[i];
-    int sum; 
-    int ans = 0;
-    int i, j;
-    for(i=1;i<n;i++){
-        for(j=0;j<i;j++){
-            sum = a[i]+a[j];
-            if (sum%3==0){
-            ans++;
-            }
-        }
-    }
-    
-    
-    print(ans);
+    int l, a, b, c, d;
+    cin>>l>>a>>b>>c>>d;
+    int japday = (a+(c-1))/c;
+    int matday = (b+(d-1))/d;
+    print(l-max(japday, matday));
 return 0;
 }

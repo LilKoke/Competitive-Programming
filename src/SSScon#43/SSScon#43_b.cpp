@@ -12,22 +12,13 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n; cin>>n;
-    vector<int> a(n);
-    REP(i,n) cin>>a[i];
-    int sum; 
-    int ans = 0;
-    int i, j;
-    for(i=1;i<n;i++){
-        for(j=0;j<i;j++){
-            sum = a[i]+a[j];
-            if (sum%3==0){
-            ans++;
-            }
-        }
-    }
-    
-    
-    print(ans);
+    vector<int> a(10),b(10);
+    REP(i,10) cin>>a[i];
+    REP(j,10) cin>>b[j];
+    sort(all(a),greater<int>());
+    sort(all(b),greater<int>());
+    int wans = a[0] + a[1] + a[2];
+    int kans = b[0] + b[1] + b[2];
+    cout<<wans<<" "<<kans<<endl;
 return 0;
 }

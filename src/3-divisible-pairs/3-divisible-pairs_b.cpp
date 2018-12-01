@@ -8,14 +8,15 @@ using namespace std;
 #define REP(i,n) FOR(i,0,n) 
 #define all(a) (a).begin(), (a).end()
 #define inf 10000000
+#define ll long long
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n; cin>>n;
+    ll n; cin>>n;
     vector<int> a(n);
     REP(i,n) cin>>a[i];
-    int sum; 
+    int sum;
     int ans = 0;
     int i, j;
     for(i=1;i<n;i++){
