@@ -12,13 +12,10 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int a,b,c; cin >> a>> b>>c;
-    int ans=0;
-    for(int i=a;i<=b;i++){
-        if (c%i==0){
-            ans++;
-        }
-    }
-    cout <<ans<<endl;
-return 0;
-}
+    int a, b; cin >> a >> b;
+    cout<< a/b <<" "<< a%b << " ";
+    
+    cout << fixed;
+    cout << setprecision(5) << (double)a/(double)b << endl;
+    return 0;
+}   
