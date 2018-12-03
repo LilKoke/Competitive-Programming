@@ -1,5 +1,5 @@
 #include "bits/stdc++.h"
-#include <string>
+
 using namespace std;
 
 #define print(s) cout << (s) << endl;
@@ -12,16 +12,13 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    string s;
-    cin >> s;
-    int ans = inf;
-    REP(i,s.length()-2){
-        int n = stoi(s.substr(i,3));
-        int tem=abs(753-n);
-        if (ans>tem){
-            ans = tem;
-        }
+    int a, b; cin>>a>>b;
+    if((a==1&&b>2)||(a>b&&b!=1)){
+        cout<<"Alice"<<endl;
+    } else if((b==1&&a>2)||(b>a&&a!=1)){
+        cout<<"Bob"<<endl;
+    } else if (a==b){
+        cout<<"Draw"<<endl;
     }
-    cout<<ans<<endl;
-    return 0;
+return 0;
 }

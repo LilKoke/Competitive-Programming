@@ -15,11 +15,14 @@ int main(){
     string s;
     cin >> s;
     int ans = inf;
-    REP(i,s.length()-2){
-        int n = stoi(s.substr(i,3));
-        int tem=abs(753-n);
-        if (ans>tem){
-            ans = tem;
+    for(int i = 0; i < s.length() - 2; ++i){
+        for(int j = i + 1; j < s.length() - 1; ++j){
+            for(int k = j + 1; k < s.length(); ++k){    
+                int tem = abs(753-((int(s[i]) - int('0')) * 100 + (int(s[j]) - int('0')) * 10 + (int(s[k]) - int('0'))));
+                if(tem<ans){
+                    ans = tem;
+                }
+            }
         }
     }
     cout<<ans<<endl;
