@@ -6,21 +6,20 @@ using namespace std;
 #define sp(x) cout<<setprecision(x);
 #define FOR(i,a,b) for(int i=(a);i<(b);i++)
 #define REP(i,n) FOR(i,0,n) 
-#define all(a) (a).begin(), (a).end()
-#define inf 10000000
+#define all(a) a.begin(), (a).end()
+#define inf = 9876543210
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int a, b, c, d, e; cin>>a>>b>>c>>d>>e;
-    int ans;
-    if(a<0){
-        ans = c*(-a) + d + (e*b);
-    } else if (a==0){
-        ans = d + (e*b);
-    } else if (a>0){
-        ans = e*(b-a);
+    vector<int> a(5);
+    REP(i,5) {
+        cin>>a[i];
+        if (a[i] < 40){
+            a[i] = 40;
+        }
     }
-    cout<<ans<<endl;
+    int sum = accumulate(all(a), 0);
+    print(sum/5); 
 return 0;
 }

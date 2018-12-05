@@ -14,8 +14,9 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
-
-    
-    
+    int l, a, b, c, d;cin >> l >> a >> b >> c >> d;
+    int study = max((a+(c-1))/c, (b+(d-1))/d);
+    int ans = l - study;
+    cout<<ans<<endl;
+    return 0;
 }

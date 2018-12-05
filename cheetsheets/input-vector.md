@@ -15,3 +15,6 @@ rep(i,n){
     cin >> in;
     a.push_back(in); 
 }
+
+配列の和
+accumulate(all(a),0);

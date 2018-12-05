@@ -14,8 +14,10 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
-
-    
-    
+    int total; cin>>total;
+    vector<int> a(9);
+    REP(i,9) cin>>a[i];
+    int ans = total - accumulate(all(a),0);
+    cout<<ans<<endl;
+    return 0;
 }

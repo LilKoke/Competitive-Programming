@@ -12,6 +12,15 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int a, b, c, d, p; cin>>a>>b>>c>>d>>p;
+    int costx = a*p;
+    int costy;
+    if(p<=c){
+        costy = b;
+    } else {
+        costy = b + (p-c)*d;
+    }
+    
+    cout<<min(costx, costy)<<endl;
 return 0;
 }

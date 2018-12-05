@@ -57,3 +57,15 @@ A[1][0] A[1][1] A[1][2] A[1][3] ... A[1][w-1]
 A[2][0] A[2][1] A[2][2] A[2][3] ... A[2][w-1]
 ...
 A[h-1][0] A[h-1][1] A[h-1][2] A[h-1][3] ... A[h-1][w-1]
+
+vector<vector<int>> a(h);　だったら、縦にh列の配列を作る
+int h,w; cin>>h>>w;
+    vector<vector<int> > a(h);
+
+    REP(m,h){
+        REP(n,w){
+            int in;
+            cin>>in;
+            a[m].push_back(in);
+        }
+    }
