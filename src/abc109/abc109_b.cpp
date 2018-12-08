@@ -12,6 +12,27 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    int n; cin>>n;
+    vector<string>w(n);
+    REP(i,n)cin>>w[i];
+    int ans = 1;
+    REP(i,n-1){
+        for(int j = i+1; j<n; j++){
+            if(w[i] == w[j]){
+                ans = 0;
+            }  
+        }
+    }
+    REP(i,n-1){
+        if(w[i].back()!= w[i+1].front()){
+            ans = 0;
+        }
+    }
 
-return 0;
+    if(ans == 0){
+        cout<<"No"<<endl;
+    } else if (ans == 1){
+        cout<<"Yes"<<endl;
+    }
+    return 0;
 }

@@ -12,7 +12,24 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    
-
+    int a, b;
+    char op;
+    while(op != '?'){
+        cin>>a>>op>>b;
+        int ans;
+        if(op=='+'){
+            ans = a+b;
+            cout<<ans<<endl;
+        } else if (op=='-'){
+            ans = a-b;
+            cout<<ans<<endl;    
+        } else if (op=='*'){
+            ans = a*b;
+            cout<<ans<<endl;            
+        } else if (op=='/'){
+            ans = a/b;
+            cout<<ans<<endl;
+        }     
+    }
     return 0;
 }

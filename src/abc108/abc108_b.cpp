@@ -12,6 +12,12 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int ax, ay, bx, by; cin>>ax>>ay>>bx>>by;
+    int cx, cy, dx, dy;
+    cx = ax - (by-ay);
+    cy = ay + (bx-ax);
+    dx = cx - (ay-cy);
+    dy = cy + (ax-cx);
+    cout<<dx<<" "<<dy<<" "<<cx<<" "<<cy;
 return 0;
 }

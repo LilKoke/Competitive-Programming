@@ -17,12 +17,10 @@ inline double circleArea( double radius) {
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int r; cin >> r;
+    double r; cin >> r;
     double s, l;
     s = circleArea((double)r);
     l = 2 * M_PI * r;
-    cout << fixed;
-    print("hello");
-    cout << setprecision(6) << s <<" " << l << endl; 
+    printf("%f %f", s, l); 
     return 0;
 }

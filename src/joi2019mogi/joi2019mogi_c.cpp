@@ -12,9 +12,21 @@ using namespace std;
 
 typedef pair<int, int> P;
 typedef long long ll;
+
+int factorial( int x )
+{
+int tmp = x;
+for( int i = 1; i < x-1 ;++i )
+tmp *= x-i;
+return tmp;
+}
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    int m, n, q; cin>>m>>n>>q;
+    vector<P > p(q);
+    REP(i,q) cin>>p[i].first>>p[i].second;
+    REP(i,m){}
     return 0;
 }

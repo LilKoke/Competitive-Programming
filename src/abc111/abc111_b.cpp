@@ -12,5 +12,11 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int n; cin>>n;
+    int i = 1;
+    int v = 111;
+    while(n>v){
+    v+=111;
+    }
+    print(v);
 }

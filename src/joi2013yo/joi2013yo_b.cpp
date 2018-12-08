@@ -14,27 +14,31 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n; cin>>n;
-    vector<vector<int> > a(n);
+    int n; cin>>n;//n players
+    vector<vector<int> > a(n);//3回ゲームをした時の点数がN人分
+    vector<vector<int> > b(n);//判定用
     int in;
     REP(i,n){
         REP(j,3){
             cin>>in;
             a[i].push_back(in);
+            b[i].push_back(in);
         }
     }
-    vector<int> score(n);
-    
-    REP(j,3){
-        REP(i,n-1){
-            for(int k = 1; k>i && k<n; k++){
-                if(a[i][j] == a[k][j]){
+    REP(j,3){//j回目について
+        REP(i,n){//i人目のプレイヤーについて
+            for(int k = i+1; k<n; k++){//プレイヤーiとは別のプレイヤーｋについて
+                if(b[i][j] == b[k][j]){
                     a[i][j] = 0;
                     a[k][j] = 0;
                 }
-                         
             }    
         }            
+    }
+
+    REP(i,n) {
+        int ans = a[i][0] + a[i][1] + a[i][2];
+        cout<<ans<<endl;
     }
     return 0;
 }

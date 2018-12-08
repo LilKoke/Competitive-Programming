@@ -12,6 +12,42 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int n, m, d; cin>>n>>m>>d;
+    vector<vector<char>> v(n);
+    char in;
+    REP(i,n){
+        REP(j,m){
+            cin>>in;
+            v[i].push_back(in);
+        }
+    }
+    int yoko = n-d+1;
+    int tate = m-d+1;
+    int ans = 0;
+    if(d<=m){
+        REP(i,yoko){
+            REP(j,m){
+                REP(k,d){
+                    if(v[i+k][m] == '#'){
+                        break;    
+                    }
+                }
+                ans++;
+            }
+        }
+    }
+    if(d<=n){
+        REP(i,tate){
+            REP(j,n){
+                REP(k,d){
+                    if(v[i+k][n] == '#'){
+                        break;    
+                    }
+                }
+                ans++;
+            }
+        }
+    }
+    cout<<ans<<endl;
 return 0;
 }

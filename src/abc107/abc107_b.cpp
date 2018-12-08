@@ -12,6 +12,14 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    int h, w; cin>>h>>w;
+    vector<vector<char>>a(h);
+    char in;
+    for(int i;i<h;i++){
+        for(int j;j<w;j++){
+           cin>>in;
+           a.push_back[i]; 
+        }
+    }
 return 0;
 }
