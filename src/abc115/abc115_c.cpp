@@ -1,4 +1,4 @@
- #include "bits/stdc++.h"
+#include "bits/stdc++.h"
 
 using namespace std;
 
@@ -16,14 +16,16 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    ll n, m; cin>>n>>m;
-    vector<ll> a(n),b(m);//ｎこのリンゴの濃さ
-    REP(i,n) cin>>a[i];
-    for(i=1;i<(1<<m);i++){//すべての箱の使い方に対して
-        REP(i,m){
-
-        }
-        
+    ll n, k; cin>>n>>k;
+    vector<ll> h(n);
+    REP(i,n) cin>>h[i];
+    sort(all(h));
+    ll ans = linf;
+    ll temp;
+    for(ll i = 0; i+k<=n;i++){
+        temp = h[i+k-1] - h[i];
+        ans = min(ans,temp);
     }
+    print((ll)ans);
     return 0;
 }

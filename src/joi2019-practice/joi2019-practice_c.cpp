@@ -3,7 +3,7 @@
 using namespace std;
 
 #define sp(x) cout<<setprecision(x);
-#define FOR(i,a,b) for(ll i=(a);i<(b);i++)
+#define FOR(i,a,b) for(int i=(a);i<(b);i++)
 #define REP(i,n) FOR(i,0,n)
 #define all(a) (a).begin(), (a).end()
 #define inf 10000000
@@ -16,14 +16,11 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    ll n, m; cin>>n>>m;
-    vector<ll> a(n),b(m);//ｎこのリンゴの濃さ
+    int n;cin>>n;
+    vector<int> a(n);
     REP(i,n) cin>>a[i];
-    for(i=1;i<(1<<m);i++){//すべての箱の使い方に対して
-        REP(i,m){
-
-        }
-        
-    }
+    reverse(all(a));
+    REP(i,n) cout<<a[i]<<" ";
+    cout<<endl;
     return 0;
 }
