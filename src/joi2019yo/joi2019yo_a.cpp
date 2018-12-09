@@ -16,5 +16,13 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    int a, b, c; cin>>a>>b>>c;
+    int ans = 0;
+    while(1) {
+        int coins = a*ans + b*(ans/7);
+        ans++;
+        if (coins>=c) break;
+    }
+    print(ans-1);
     return 0;
 }

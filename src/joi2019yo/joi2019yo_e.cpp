@@ -16,5 +16,18 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    int n,m; cin>>n>>m;
+    vector<int> a(n);
+    vector<P > p(m);
+    REP(i,n) cin>>a[i];
+    REP(i,m){
+        cin>>p[i].first>>p[i].second;
+    }
+    temp = -inf;
+    REP(j,m){
+        templ = p[i].first;
+        tempr = p[i].second;
+    }
+
     return 0;
 }
