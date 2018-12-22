@@ -12,6 +12,21 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+    string s; cin>>s;
+    int ans = 0;
+    int tempa, tempz;
+    while(1){
+        tempa = s.find_first_of('A');
+        tempz = s.find_first_of('Z');
+        s.erase(s.begin() + tempa);
+        s.erase(s.begin() + tempz);
+        int temp = tempz-tempa + 1;
+        int ans = max(temp, ans);
+        if(tempa == string::npos || tempz == string::npos){
+            break;
+        }
+    }
+    
+    print(ans);
 return 0;
 }
