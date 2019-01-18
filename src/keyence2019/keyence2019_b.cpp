@@ -16,5 +16,18 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    string s; cin>>s;
+    string reals = s;
+    int n = s.length()-1;
+    bool flag = false;
+    REP(i,8){
+        if((s.substr(0,i)+s.substr(n+i-6,7-i))=="keyence"){
+            flag=true; 
+            break; 
+        }
+    }
+    if(flag == true) print("YES");
+    else if(flag == false) print("NO");
     return 0;
 }
+

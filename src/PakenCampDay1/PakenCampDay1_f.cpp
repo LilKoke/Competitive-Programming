@@ -16,10 +16,19 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    vector<int> n(4);
-    REP(i,4) cin>>n[i];
-    sort(all(n));
-    if(n[0] == 1 && n[1] == 4 && n[2] == 7 && n[3] == 9) print("YES");
-    else print("NO");
+    int n; cin>>n;
+    vector<int> a(n);
+    REP(i,n) cin>>a[i];
+    sort(all(a));
+    int mineven;
+    REP(i,n){
+        if(a[i]%2 == 1) {
+            mineven = a[i];
+            break;
+        } else continue;
+    }
+    int sum = accumulate(all(a),0);
+    if(sum%2 == 0) print(sum/2);
+    else print((sum-mineven)/2);
     return 0;
 }

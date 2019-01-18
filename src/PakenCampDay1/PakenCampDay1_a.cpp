@@ -16,10 +16,8 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    vector<int> n(4);
-    REP(i,4) cin>>n[i];
-    sort(all(n));
-    if(n[0] == 1 && n[1] == 4 && n[2] == 7 && n[3] == 9) print("YES");
-    else print("NO");
+    string s; cin>>s;
+    if(s=="ani") print("square1001");
+    else if(s=="otouto") print("e869120");
     return 0;
 }
