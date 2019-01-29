@@ -13,25 +13,19 @@ using namespace std;
 typedef pair<int, int> P;
 typedef long long ll;
  
+int n, m;
+int ans = 0;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n, x;
-    int ans = 0;
-    while(1){
-        cin>>n>>x;
-        if(n==0)break;
-        FOR(i,1,n-1)
-        {
-            FOR(j,i+1,n)
-            {
-                FOR(k,j+1,n+1)
-                    if(i+j+k==x) ans++;
-            }
-
+    cin>>n>>m;
+    vector<int> a(m), b(m), l(m);
+    REP(j,m) cin>>a[j]>>b[j]>>l[j];
+    REP(i,m-1){
+        if(b[i] == a[i+1]){
+            if(l[i] + l[i+1] == 2540) ans++;
         }
-        print(ans);
-        ans = 0;
     }
+    print(ans);
     return 0;
 }

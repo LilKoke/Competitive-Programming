@@ -12,26 +12,15 @@ using namespace std;
 
 typedef pair<int, int> P;
 typedef long long ll;
- 
+
+vector<int> v(999);
+int a, b, ans;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n, x;
-    int ans = 0;
-    while(1){
-        cin>>n>>x;
-        if(n==0)break;
-        FOR(i,1,n-1)
-        {
-            FOR(j,i+1,n)
-            {
-                FOR(k,j+1,n+1)
-                    if(i+j+k==x) ans++;
-            }
-
-        }
-        print(ans);
-        ans = 0;
-    }
+    REP(i,999) v[i] = (i+2)*(i+1)/2;
+    cin>>a>>b;
+    ans = v[b-a-1] - b;
+    print(ans);
     return 0;
 }

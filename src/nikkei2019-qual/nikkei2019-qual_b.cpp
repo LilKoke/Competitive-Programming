@@ -16,22 +16,13 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n, x;
+    int n; cin>>n;
+    string a,b,c; cin>>a>>b>>c;
     int ans = 0;
-    while(1){
-        cin>>n>>x;
-        if(n==0)break;
-        FOR(i,1,n-1)
-        {
-            FOR(j,i+1,n)
-            {
-                FOR(k,j+1,n+1)
-                    if(i+j+k==x) ans++;
-            }
-
-        }
-        print(ans);
-        ans = 0;
+    REP(i,n){
+        if(a[i]!=b[i]&&b[i]!=c[i]&&c[i]!=a[i]) ans += 2;
+        else if(a[i]!=b[i]||b[i]!=c[i]||c[i]!=a[i]) ans++;
     }
+    print(ans);
     return 0;
 }

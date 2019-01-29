@@ -16,22 +16,21 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n, x;
+    string in;
+    int length;
     int ans = 0;
-    while(1){
-        cin>>n>>x;
-        if(n==0)break;
-        FOR(i,1,n-1)
-        {
-            FOR(j,i+1,n)
-            {
-                FOR(k,j+1,n+1)
-                    if(i+j+k==x) ans++;
-            }
-
+    while(in!="0"){
+        cin>>in;
+        length = in.length();
+        vector<string> num(length);
+        REP(i,length){
+            num[i] = in[i];
+            ans += stoi(num[i]);
         }
-        print(ans);
-        ans = 0;
+        if(in!="0"){
+            print(ans);
+        }
+        ans = 0;        
     }
     return 0;
 }
