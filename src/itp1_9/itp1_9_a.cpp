@@ -12,21 +12,27 @@ using namespace std;
 
 typedef pair<int, int> P;
 typedef long long ll;
-
-string judge(string s, string p){
-    s += s.substr(0,p.length()-1);
-    REP(i,s.length()){
-        if(s.substr(i,p.length()) == p) return "Yes";
-        else continue;
-    }
-    return "No";
-}
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    string s; cin>>s;
-    string p; cin>>p;
-    print(judge(s,p));
+    string w;
+    cin>>w;
+    string in;
+    vector<string> t;
+    int count = 0;
+    while(in!="END_OF_TEXT"){
+        cin>>in;
+        if(in == "END_OF_TEXT") break;
+        transform(all(in), in.begin(), ::tolower);
+        t.push_back(in);
+        count++;
+    }
+    int ans = 0;
+    REP(i,count){
+        if(t[i] == w) ans++;
+        else continue;
+    }
+    print(ans);
     return 0;
 }
