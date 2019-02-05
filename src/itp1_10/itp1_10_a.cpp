@@ -9,14 +9,19 @@ using namespace std;
 #define inf 10000000
 #define linf INT64_MAX*0.99
 #define print(s) cout<<(s)<<endl
-#define lint long long
-#define yes "Yes"
-#define no "No"
 
 typedef pair<int, int> P;
+typedef long long ll;
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    double x1, y1;
+    cin>>x1>>y1;
+    double x2, y2;
+    cin>>x2>>y2;
+    double answer = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+    cout<<fixed;
+    cout<<setprecision(5)<<answer<<endl;
     return 0;
 }

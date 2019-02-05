@@ -9,14 +9,25 @@ using namespace std;
 #define inf 10000000
 #define linf INT64_MAX*0.99
 #define print(s) cout<<(s)<<endl
-#define lint long long
-#define yes "Yes"
-#define no "No"
 
 typedef pair<int, int> P;
+typedef long long ll;
  
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    int n;
+    cin>>n;
+    vector<int> l(n);
+    REP(i,n) cin>>l[i];
+    sort(all(l),greater<int>());
+    int sum = 0;
+    FOR(i,1,n){
+        sum += l[i];
+    }
+    bool flag = false;
+    if(sum>l[0]) flag = true;
+    if(flag) print("Yes");
+    else print("No");
     return 0;
 }

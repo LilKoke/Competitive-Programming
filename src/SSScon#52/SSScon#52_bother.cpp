@@ -9,14 +9,29 @@ using namespace std;
 #define inf 10000000
 #define linf INT64_MAX*0.99
 #define print(s) cout<<(s)<<endl
-#define lint long long
-#define yes "Yes"
-#define no "No"
 
 typedef pair<int, int> P;
- 
+typedef long long ll;
+
 int main(){
     ios::sync_with_stdio(false);
+    int n;
+    cin>>n;
+    int a, b;
+    cin>>a>>b;
+    vector<vector<int> > d(n);
+    REP(i,n){
+        REP(j,4){
+            int in;
+            cin>>in;
+            d[i].push_back(in);
+        }
+    }
+    REP(i,a){
+        REP(i,b){
+            
+        }
+    }
     cin.tie(0);
     return 0;
 }

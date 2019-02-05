@@ -9,14 +9,21 @@ using namespace std;
 #define inf 10000000
 #define linf INT64_MAX*0.99
 #define print(s) cout<<(s)<<endl
-#define lint long long
-#define yes "Yes"
-#define no "No"
 
 typedef pair<int, int> P;
- 
+typedef long long ll;
+ll XOR(ll n, ll k, vector<ll> a){
+    sort(all(a));
+    REP(i,n){
+        a[i]^x;
+    }
+}
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    ll n, k;
+    cin>>n>>k;
+    vector<ll> a(n);
+    REP(i,n) cin>>a[i];
     return 0;
 }
