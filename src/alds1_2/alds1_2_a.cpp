@@ -14,27 +14,32 @@ using namespace std;
 #define no "No"
 
 typedef pair<int, int> P;
-bool isprime(int x){
-    if(x==2) return true;
-    else if(x<2 || x%2 == 0) return false;
-    int i = 3;
-    while(i<=sqrt(x)){  
-        if(x%i==0) return false;
-        i = i + 2;
-    }
-    return true;
-}
- 
+
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
     int n; cin>>n;
-    vector<int> a(n);
     int cnt = 0;
+    vector<int> a(n);
+    REP(i,n) cin>>a[i];
     REP(i,n){
-        cin>>a[i];
-        if(isprime(a[i])) cnt++;
+        int flag = 1;
+        while(flag){
+            flag = 0;
+            for(int j = n-1; j>i; j--){
+                if(a[j]<a[j-1]){
+                    swap(a[j],a[j-1]);
+                    cnt++;
+                    flag = 1;
+                }
+            }
+        }
     }
+    cout<<a[0];
+    FOR(i,1,n){
+        cout<<" "<<a[i];        
+    }
+    cout<<endl;
     print(cnt);
     return 0;
 }

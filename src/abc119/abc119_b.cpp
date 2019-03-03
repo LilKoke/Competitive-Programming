@@ -14,21 +14,23 @@ using namespace std;
 #define no "No"
 
 typedef pair<int, int> P;
-int gcd(int x, int y){
-    int r;
-    while(y>0){
-        r = x%y;
-        x = y;
-        y = r;
-    }
-    return x;
-}
+ 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    lint x, y;
-    cin>>x>>y;
-    if(x<y) swap(x,y);  
-    print(gcd(x,y));
+    int n; cin>>n;
+    vector<double> x(n);
+    vector<string> u(n);
+    REP(i,n) cin>>x[i]>>u[i];
+    double ans = 0;
+    REP(i,n){
+        if(u[i]== "JPY"){
+            ans += x[i];
+        } else if(u[i] == "BTC"){
+            ans += x[i] * 380000.0;
+        }
+    }
+    cout<<fixed;
+    cout<<setprecision(6)<<ans<<endl;
     return 0;
 }

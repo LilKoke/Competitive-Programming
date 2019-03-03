@@ -14,21 +14,29 @@ using namespace std;
 #define no "No"
 
 typedef pair<int, int> P;
-int gcd(int x, int y){
-    int r;
-    while(y>0){
-        r = x%y;
-        x = y;
-        y = r;
-    }
-    return x;
-}
+ 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    lint x, y;
-    cin>>x>>y;
-    if(x<y) swap(x,y);  
-    print(gcd(x,y));
+    int n; cin>>n;
+    int cnt = 0;
+    vector<int> a(n);
+    REP(i,n) cin>>a[i];
+    REP(i,n){
+        int minj = i;
+        FOR(j,i,n){
+            if(a[j]<a[minj]){
+                minj = j;
+            }
+        }
+        if(minj != i) cnt++;
+        swap(a[i],a[minj]);
+    }
+    cout<<a[0];
+    FOR(i,1,n){
+        cout<<" "<<a[i];        
+    }
+    cout<<endl;
+    print(cnt);
     return 0;
 }

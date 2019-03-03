@@ -14,21 +14,14 @@ using namespace std;
 #define no "No"
 
 typedef pair<int, int> P;
-int gcd(int x, int y){
-    int r;
-    while(y>0){
-        r = x%y;
-        x = y;
-        y = r;
-    }
-    return x;
-}
+ 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    lint x, y;
-    cin>>x>>y;
-    if(x<y) swap(x,y);  
-    print(gcd(x,y));
+    string s; cin>>s;
+    string month = s.substr(5,2);
+    int m = stoi(month);
+    if(m<5) print("Heisei");
+    else print("TBD");
     return 0;
 }
