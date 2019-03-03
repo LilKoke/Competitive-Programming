@@ -18,9 +18,15 @@ typedef pair<int, int> P;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    lint a, b, c;
-    cin>>a>>b>>c;
-    if((b/a)>c) print(c);
-    else print(b/a);
+    string s; cin>>s;
+    int ans;
+    int zero = 0;
+    int one = 0;
+    REP(i,s.length()){
+        if(s[i]=='0') zero++;
+        else one++;
+    }
+    ans = min(one, zero);
+    print(ans*2);   
     return 0;
 }

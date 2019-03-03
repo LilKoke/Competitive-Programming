@@ -1,21 +1,4 @@
- #include "bits/stdc++.h"
-
-using namespace std;
-
-#define sp(x) cout<<setprecision(x);
-#define FOR(i,a,b) for(long long i=(a);i<(b);i++)
-#define REP(i,n) FOR(i,0,n)
-#define all(a) (a).begin(), (a).end()
-#define inf 10000000
-#define linf INT64_MAX*0.99
-#define print(s) cout<<(s)<<endl
-#define lint long long
-#define yes "Yes"
-#define no "No"
-
-typedef pair<int, int> P;
-
-
+切り離すのは難しいからつなぐ
 class UnionFind {
 public:
     //親の番号を格納する。親だった場合は-(その集合のサイズ)
@@ -54,35 +37,4 @@ public:
 
         return true;
     } 
-};
-
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    int n,m;cin>>n>>m;
-    vector<int> a(m), b(m);
-    REP(i,m){ 
-        cin>>a[i]>>b[i];
-        a[i]--;
-        b[i]--;
-    }
-    
-    vector<long long> ans(m);
-    ans[m-1] = (long long)n * (n-1)/2;
-    
-    UnionFind Uni(n);
-
-    for(int i = m-1; i>=1; i--){
-        ans[i-1] = ans[i];
-
-        if(Uni.root(a[i]) != Uni.root(b[i])){
-            ans[i - 1] -= (long long)Uni.size(a[i]) * Uni.size(b[i]); 
-            Uni.connect(a[i], b[i]);
-        }
-    }
-
-    REP(i,m){
-        cout<<ans[i]<<endl;
-    }
-    return 0;
 }

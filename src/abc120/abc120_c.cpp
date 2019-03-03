@@ -18,5 +18,21 @@ typedef pair<int, int> P;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
+    string s; cin>>s;
+    bool flag = true;
+    int ans = 0;
+    while(flag){
+        flag = false;
+        REP(i,s.length()-1){
+            if(s.length()!=2&&s[i]!=s[i+1]){
+                s= s.substr(0,i) + s.substr(i+2,s.length()-i-2);
+                ans+=2;
+                flag = true;
+            } else {
+                if(s[0]!=s[1]) ans+=2;
+            }
+        }
+    }
+    print(ans);   
     return 0;
 }
