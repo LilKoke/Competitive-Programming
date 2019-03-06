@@ -14,21 +14,17 @@ using namespace std;
 #define no "No"
 
 typedef pair<int, int> P;
-
+ 
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    //input
-    int n; cin>>n;
-    vector<char> m(n);
-    vector<int> f(n);
-    REP(i,n) cin>>m[i]>>f[i];
-
-    //BubbleSort
-    REP(i,n){
-        REP(j,n){
-            if(f[j]<f[j-1]) swap(f[j])
-        }
+    stack<char> ch;
+    char in;
+    while(cin>>in){
+        ch.push(in);
+    }
+    while(!isEmpty(ch)){
+        ch.pop();
     }
     return 0;
 }
