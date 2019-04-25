@@ -18,11 +18,9 @@ typedef pair<int, int> P;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    vector<int> a(5);
-    REP(i,5) cin>>a[i];
-    int k; cin>>k;
-    int ans = 0;
-    REP(i,5) if(a[i]>k) ans++;
+    int a,b,c,d,e,k; cin>>a>>b>>c>>d>>e>>k;
+    string ans = "Yay!";
+    if(e-a>k) ans = ":(";
     print(ans);
     return 0;
 }
