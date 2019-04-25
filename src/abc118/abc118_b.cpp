@@ -18,36 +18,19 @@ typedef pair<int, int> P;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    int n,m;
-    cin>>n>>m;
-    vector<int> k(n);
-    vector<bool> ans(m);
-    vector<vector<bool> > check(n);
-    vector<vector<int> > a(n);
-
-    REP(i,m) ans[i] = true;
+    int n, m; cin>>n>>m;
+    vector<int> a(m,0);
     REP(i,n){
-        REP(j,m){
-            check[i][j] = false;
+        int k; cin>>k;
+        REP(j,k){
+            int in; cin>>in;
+            a[in-1]++;
         }
     }
-    int in;
-    REP(i,n){
-        cin>>k[i];
-        REP(j,k[i]){
-            cin>>in;
-            a[i].push_back(in);
-            check[i][a[i][j]-1] = true;
-        }
-        REP(j,m){
-            if(check[i][j]==false) ans[j] = false; 
-        }
-    }
-    int count;
+    int ans = 0;
     REP(i,m){
-        if(ans[i]==true) count++;
-        else continue;
+        if(a[i]==n) ans++;
     }
-    print(count);
+    print(ans);
     return 0;
 }
