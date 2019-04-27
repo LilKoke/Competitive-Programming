@@ -18,6 +18,14 @@ typedef pair<int, int> P;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-    
+    int a, b, t; cin>>a>>b>>t;
+    int ans = 0;
+    int i = 0;
+    while(1){
+        i++;
+        if(a*i<=t+0.5) ans+=b;
+        else break;
+    }
+    print(ans);
     return 0;
 }
